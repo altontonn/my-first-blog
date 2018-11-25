@@ -1,13 +1,21 @@
-       {% extends 'blog/base.html' %}
-       {% block content %}
-        {% for post in posts %}
-            <div class="post">
-              <div class="date">
-              <p>published: {{ post.published_date }}</p>
-            </div>
-              <h2><a href="">{{ post.title }}</a></h2>
-              <p>{{ post.text | linebreaksbr }}</p>
-            </div>
-        {% endfor %}
-        {% endblock %}
-      
+<html>
+<head>
+  <title>Django Girls bog</title>
+</head>
+<body>
+  <div>
+    <h1><a href="/">Django Girls bog</a></h1>
+  </div>
+{% for post in posts %}
+  <div>
+    <p>published: {{ post.published_date }}</p>
+    <h2><a href="">{{ post.title }}</a></h2>
+    <p>{{ post.text | linebreaksbr }}</p>
+  </div>
+{% endfor %}
+  <div>
+    <h2><a href="">My second post</a></h2>
+    <p>the handles of the tool are squeezed tight. By doing this, you can ensure that the plastic connector you are using punctures the wires inside and holds them all in place. This prevents the wires from loosening and coming out. </p>
+  </div>
+</body>
+</html>
